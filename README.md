@@ -16,9 +16,7 @@ A sleek, feature-rich weather dashboard built with HTML, CSS & Vanilla JavaScrip
 
 
 🖥️ Live Demo
-🚀 View Live on Vercel →
-
-Replace the link above with your own Vercel deployment URL.
+🚀 View Live on Vercel →https://climate-peek.vercel.app/
 
 🛠️ Tech Stack
 TechnologyUsageHTML5StructureCSS3Styling, animations, responsive layoutVanilla JavaScriptLogic, API calls, DOM manipulationOpenWeatherMap APICurrent weather + 5-day forecastlocalStorageSearch history persistenceGoogle FontsDM Sans + Syne typography
