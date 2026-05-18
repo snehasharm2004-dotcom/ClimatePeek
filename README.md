@@ -66,4 +66,14 @@ Push this repo to GitHub
 Go to vercel.com → New Project
 Import your GitHub repository
 Click Deploy — done! 🎉
+📝 License
+This project is open source and available under the MIT License.
+
+🙌 Acknowledgements
+
+OpenWeatherMap for the free weather API
+Google Fonts for DM Sans & Syne
+Weather emoji system based on OWM condition ID ranges
+
+
 
