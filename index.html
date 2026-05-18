@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClimatePeek — Weather Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+ 
+  <header>
+    <div class="logo">Climate<span>Peek</span></div>
+    <div class="unit-toggle">
+      <button class="unit-btn active" id="btn-c" onclick="setUnit('C')">°C</button>
+      <button class="unit-btn" id="btn-f" onclick="setUnit('F')">°F</button>
+    </div>
+  </header>
+ 
+  <!-- Search -->
+  <div class="search-wrap">
+    <div class="search-bar">
+      <input class="search-input" id="city-input" type="text"
+        placeholder="Search city… e.g. Tokyo, New York, Mumbai"
+        onkeydown="if(event.key==='Enter')fetchWeather()">
+      <button class="search-btn" onclick="fetchWeather()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        Search
+      </button>
+    </div>
+  </div>
+ 
+  <!-- History pills -->
+  <div class="history-row" id="history-row"></div>
+ 
+  <!-- Error -->
+  <div class="error-box" id="error-box">
+    <span class="error-icon">⚠️</span>
+    <span class="error-text" id="error-text">City not found. Please try again.</span>
+  </div>
+ 
+  <!-- Spinner -->
+  <div class="spinner-wrap" id="spinner">
+    <div class="spinner"></div>
+    <span class="spinner-text">Fetching weather data…</span>
+  </div>
+ 
+  <!-- Main weather content -->
+  <div class="weather-main" id="weather-main">
+    <!-- Current conditions -->
+    <div class="current-card">
+      <div class="current-left">
+        <div class="city-name" id="city-name">—</div>
+        <div class="country-date" id="country-date">—</div>
+        <div class="temp-big" id="temp-display">—</div>
+        <div class="feels-like" id="feels-like">—</div>
+        <div class="condition-badge">
+          <span class="cond-icon" id="cond-icon">☀️</span>
+          <span id="condition-text">—</span>
+        </div>
+      </div>
+      <div class="current-right">
+        <span class="weather-emoji" id="weather-emoji">☀️</span>
+      </div>
+      <div class="stats-row" style="grid-column:1/-1">
+        <div class="stat">
+          <div class="stat-label">Humidity</div>
+          <div class="stat-val" id="stat-humidity">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Wind</div>
+          <div class="stat-val" id="stat-wind">—</div>
+          <div class="stat-sub">km/h</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Visibility</div>
+          <div class="stat-val" id="stat-vis">—</div>
+          <div class="stat-sub">km</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Pressure</div>
+          <div class="stat-val" id="stat-pressure">—</div>
+          <div class="stat-sub">hPa</div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- 5-Day Forecast -->
+    <div class="section-title">5-Day Forecast</div>
+    <div class="forecast-grid" id="forecast-grid"></div>
+ 
+    <!-- Extra info -->
+    <div class="section-title">More Details</div>
+    <div class="info-row">
+      <div class="info-card">
+        <div class="info-card-label">Sunrise</div>
+        <div class="info-card-val" id="info-sunrise">—</div>
+        <div class="info-card-sub">Local time</div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Sunset</div>
+        <div class="info-card-val" id="info-sunset">—</div>
+        <div class="info-card-sub">Local time</div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Wind speed</div>
+        <div class="info-card-val" id="info-wind">—</div>
+        <div class="info-card-sub">km/h</div>
+        <div class="wind-bar"><div class="wind-fill" id="wind-fill" style="width:0%"></div></div>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+<script src="script.js"></script>
+</body>
+</html>
