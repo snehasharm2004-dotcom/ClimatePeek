@@ -1,4 +1,5 @@
 🌤️ ClimatePeek — Weather Dashboard
+[ClimatePeek Dashboard](preview.png)
 A sleek, feature-rich weather dashboard built with HTML, CSS & Vanilla JavaScript using the free OpenWeatherMap API. Search any city in the world and get real-time weather data with a stunning dark UI.
 
 ✨ Features
