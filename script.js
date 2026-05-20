@@ -115,6 +115,7 @@ function renderCurrent(cur, forecast) {
  
   document.getElementById('temp-display').textContent = toDisplay(cur.main.temp);
   document.getElementById('feels-like').textContent = `Feels like ${toDisplay(cur.main.feels_like)}`;
+
  
   const wid = cur.weather[0].id;
   const wicon = cur.weather[0].icon;
