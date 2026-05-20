@@ -23,6 +23,13 @@ A sleek, feature-rich weather dashboard built with HTML, CSS & Vanilla JavaScrip
 TechnologyUsageHTML5StructureCSS3Styling, animations, responsive layoutVanilla JavaScriptLogic, API calls, DOM manipulationOpenWeatherMap APICurrent weather + 5-day forecastlocalStorageSearch history persistenceGoogle FontsDM Sans + Syne typography
 
 🚀 Getting Started
+## 🔐 API Key Note
+
+This is a client-side project, so the API key is visible in the source code.
+For a production app, the recommended approach would be:
+- Store the key in a `.env` file (never commit it)
+- Create a lightweight backend proxy to make API calls server-side
+- Use environment variables on the deployment platform (e.g. Vercel)
 1. Clone the repository
 bashgit clone https://github.com/your-username/climatePeek-weather.git
 cd nimbus-weather
